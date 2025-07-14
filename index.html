@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- ...inizio codice invariato... -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scrollytelling – Annalisa Berti</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* GENERAL STYLES */
+    body {
+      margin: 0;
+      font-family: 'Lora', Georgia, serif;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: auto;
+      padding: 1em;
+    }
+
+    h1 {
+      font-size: 3em;
+      font-weight: bold;
+      margin-bottom: 0.3em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      font-weight: normal;
+      margin-top: 0;
+    }
+
+    .byline {
+      font-style: italic;
+      margin-bottom: 2em;
+      color: #555;
+    }
+
+    .intro-image {
+      width: 100%;
+      height: 55vh;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 2em;
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 2em;
+    }
+
+    /* GRAFICI CENTRATI E RIDIMENSIONATI */
+    figure {
+      margin: 0 auto 2em auto;
+      text-align: center;
+    }
+
+    figure img {
+      max-width: 85%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    figcaption {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 0.5em;
+    }
+
+    /* SCROLLY STYLES */
+    .scrolly-container {
+      position: relative;
+      margin-bottom: 1.2em;
+    }
+
+    .sticky-thing {
+      position: sticky;
+      top: 0;
+      z-index: 0;
+      height: 70vh;
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    .sticky-thing img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .steps-container {
+      transform: translate3d(0, 0, 0);
+      position: relative;
+      z-index: 10;
+      max-width: 35rem;
+      margin: 0 auto;
+      padding-bottom: 4em;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50vh;
+    }
+
+    .step p {
+      width: 700px;
+      margin: 0 1em;
+      padding: 1.2em;
+      text-align: center;
+      background-color: #009076cc; /* FIFA */
+      color: white;
+      border-radius: 10px;
+    }
+
+    .step:nth-child(2) p {
+      background-color: #e67c1dcc; /* NBA */
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      color: #666;
+      padding: 4em 1em;
+      font-size: 0.9em;
+    }
+
+    /* RESPONSIVE */
+    @media only screen and (max-width: 700px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .step p {
+        width: auto;
+      }
+
+      figure img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- INTRO IMAGE + TITLE -->
+  <img class="intro-image" src="IMMAGINE_1.jpg" alt="Intro image">
+
+  <div class="content">
+    <h1><strong>NBA FINALS</strong> VS <strong>FIFA CLUB WORLD CUP</strong>:<br>WHO WON IN AMERICA?</h1>
+    <h2>Where and for what the sporting heart of Americans beats</h2>
+    <p class="byline">By Annalisa Berti</p>
+
+    <!-- Primo trafiletto -->
+    <p>In June 2025, American search engines told us more than just the game results.
+An analysis of Google Trends data reveals how interest was split between two global events: the <strong>NBA Finals</strong> and the <strong>FIFA Club World Cup</strong>.
+In recent years, the United States has become fertile ground for international sports. The <strong>NBA Finals</strong> are a long-established and highly anticipated event, but FIFA heavily invested in the U.S. edition of its <strong>Club World Cup</strong>, hoping to expand soccer’s influence in a market still dominated by basketball and football.
+To understand which event truly captured American attention, we analyzed Google Trends data focusing on online search volumes during June.
+(Even though the final between Chelsea and PSG was played in July, we focused on the previous month. After the Oklahoma City Thunder’s win on June 22nd, searches related to basketball dropped dramatically.)
+The graph below illustrates how national interest in the two events evolved. Aggregated national data show that:<br>• The peak of online interest in the <strong>NBA Finals</strong> was on June 23, the day after the final between the Oklahoma City Thunder and the Indiana Pacers;
+<br>• The highest point for the <strong>FIFA Club World Cup</strong> came on June 15th (excluding the final), following Bayern Munich’s 10–0 victory over Auckland City.
+</p>
+
+    <!-- PRIMO GRAFICO -->
+    <figure>
+      <img src="IMMAGINE_2_BIANCA.png" alt="Grafico 1">
+      <figcaption>Source: Google Trends Dataset</figcaption>
+    </figure>
+
+    <!-- Secondo trafiletto -->
+    <p>Beyond general interest, it’s important to look at where that interest manifested.
+Google Trends allows us to visualize the geographical distribution of searches related to both the <strong>NBA Finals</strong> and the <strong>FIFA Club World Cup</strong>.
+Two events, two sports, two completely different maps.
+</p>
+  </div>
+
+  <!-- MAPPE CON SCROLLY -->
+  <div class="scrolly-container">
+    <div class="sticky-thing">
+      <img id="map-image" src="MAP_1-01.png" alt="Mappa">
+    </div>
+
+    <div class="steps-container">
+      <div class="step">
+        <p>Searches were mainly concentrated in multicultural urban areas: New York, Miami, and Los Angeles top the list.
+Soccer leveraged the presence of Latin American and African communities, who are more accustomed to following <strong>FIFA</strong> events.
+Additionally, the physical location of the matches also played a role. The states with the highest levels of searches were:
+New Jersey – 67%, Florida – 67%, California – 63%, and both Maryland and Washington – 61%.
+</p>
+      </div>
+      <div class="step">
+        <p>Interest in the <strong>NBA</strong> was far more homogeneous and widespread across the country.
+Google Trends shows significant spikes in cities like San Francisco, Boston, and Chicago — but also in rural areas, where basketball has been passionately followed for decades.
+Oklahoma showed the highest level of <strong>NBA</strong> interest, with 86% of searches focused on basketball, clearly boosted by their championship win.
+Second was Indiana with 79%, followed by Montana – 76%, Hawaii – 72%, and West Virginia – 71%.
+</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <!-- Terzo trafiletto -->
+    <p>We also calculated the percentage difference in interest between the <strong>NBA</strong> and <strong>FIFA</strong> in each U.S. state, comparing online activity related to the two sports.</p>
+
+    <!-- SECONDO GRAFICO -->
+    <figure>
+      <img src="IMMAGINE_3.png" alt="Grafico 2">
+      <figcaption>Source: Google Trends Dataset</figcaption>
+    </figure>
+
+    <!-- Testo finale -->
+    <p>The map of sports interest in the United States is shifting. Basketball remains the undisputed king, but soccer, especially in large, multicultural states, is rapidly gaining ground. Google Trends offers a fascinating window into how the sporting passions of an entire nation are evolving in near real time: not only what people care about, but where that interest is concentrated. It’s a valuable tool for understanding cultural dynamics, anticipating trends, and guiding future investments in a country where sports are more than entertainment,  they are identity, community, and transformation.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    This page is a project designed for the Lede Data Journalism Program at Columbia University in July 2025
+  </div>
+
+  <!-- SCRIPT CAMBIO MAPPA -->
+  <script>
+    const steps = document.querySelectorAll(".step");
+    const mapImage = document.getElementById("map-image");
+
+    window.addEventListener("scroll", () => {
+      const trigger = window.innerHeight / 2;
+
+      steps.forEach((step, index) => {
+        const rect = step.getBoundingClientRect();
+        if (rect.top < trigger && rect.bottom > trigger) {
+          if (index === 0) {
+            mapImage.src = "MAP_1-01.png";
+          } else if (index === 1) {
+            mapImage.src = "MAP_2-01.png";
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
